@@ -1,20 +1,12 @@
+import MENU
 import Conjunto
 
 if __name__=="__main__":
-    conjunto1=Conjunto.Conjunto()
-    conjunto1.test1()
-    conjunto2=Conjunto.Conjunto()
-    conjunto2.test2()
-    print("Conjunto 1:")
-    print(conjunto1)
-    print("Conjunto 2")
-    print(conjunto2)
-    print("Union de conjunto 1 y conjunto 2")
-    print(conjunto1+conjunto2)
-    print("Diferencia entre conjunto 1 y conjunto 2")
-    print(conjunto1-conjunto2)
-    print("Comparacion entre conjuntos")
-    if(conjunto1==conjunto2):
-        print("Son iguales")
-    else:
-        print("Son distintos")
+    menu=MENU.menu()
+    conjunto_1=Conjunto.Conjunto()
+    conjunto_2=Conjunto.Conjunto()
+    control=input("\nIngrese una opcion:\n1_ Cargar conjunto 1\n2_ Cargar Conjunto 2\n3_ Union de Conjuntos\n4_ Diferencia de Conjuntos\n5_ Igualdad de Conjuntos\n6_ Vaciar Conjuntos\n0_ Salir\n\n")
+    while (control!='0'):
+        print(menu.getop(control, conjunto_1, conjunto_2))
+        control=input("\nIngrese una opcion:\n1_ Cargar conjunto 1\n2_ Cargar Conjunto 2\n3_ Union de Conjuntos\n4_ Diferencia de Conjuntos\n5_ Igualdad de Conjuntos\n6_ Vaciar conjuntos\n0_ Salir\n\n")
+
