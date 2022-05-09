@@ -27,5 +27,7 @@ if __name__=="__main__":
             ManejadorMedicamentos.ManejadorMedicamentos.AgregarMedicamento(auxiliar)
     nombre=input("Ingrese el nombre de un paciente a dar de alta\n")
     Arreglocamas.DarAlta(nombre)
+    diagnos=input("Ingrese un diagnostico\n")
+    Arreglocamas.buscarpordiagnostico(diagnos)
     archivocamas.close()
     archivomedicamentos.close()
