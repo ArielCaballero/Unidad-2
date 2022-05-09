@@ -1,7 +1,6 @@
 import numpy as np
 import Cama
 from ManejadorMedicamentos import ManejadorMedicamentos
-import datetime
 
 class ManejadorCamas:
     def __init__(self):
@@ -46,3 +45,10 @@ class ManejadorCamas:
                 print("\nTotal: {:67}".format(total))
             else:
                 print("No se encontro al Paciente")
+    def buscarpordiagnostico(self, diagnostico):
+        if (type(diagnostico)==str):
+            for cama in self.__ArregloCamas:
+                if diagnostico==cama.getdiagnostico():
+                    print ("Datos:\n {}".format(cama))
+        else:
+            print("Error en el tipo de dato")
